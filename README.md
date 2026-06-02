@@ -51,9 +51,11 @@ Folder: `Pipeline/2_Correlation`
 Run the files in this folder to calculate correlations:
 
 1. `FindCorrOnly.cpp` 
-1. `wTO_calculation.r`
+2. `wTO_calculation.r`
 
 This step creates correlation results that are used in the later network steps.
+
+Detailed run instructions for this folder are in `Pipeline/2_Correlation/README.md`.
 
 ## Step 3: CSD Network
 
@@ -65,6 +67,8 @@ Run these files in this order:
 2. `CreateNetwork.py`
 
 This step creates the C, S, D, and CSD networks used in the network analysis.
+
+Detailed run instructions for this folder are in `Pipeline/3_CSD_Network/README.md`.
 
 ## Step 4: Network Analysis
 
