@@ -1,0 +1,21 @@
+name: master-tiril
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.19
+  - numpy=1.26.4
+  - pandas=2.1.4
+  - matplotlib=3.10.7
+  - scipy=1.15.3
+  - scikit-learn=1.4.2
+  - statsmodels=0.14.5
+  - lifelines=0.30.0
+  - seaborn=0.13.2
+  - networkx=3.4.2
+  - igraph=1.0.0
+  - leidenalg=0.11.0
+  - ipykernel=7.1.0
+  - pycombat=0.20
+  - gseapy=1.1.11
+  - mygene=3.2.2
+  - py4cytoscape=1.13.0
