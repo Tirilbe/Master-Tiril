@@ -1,6 +1,6 @@
-# Simple guide for pipeline steps 1 to 7
+# Cross-Omics network analyses of PDAC
 
-This pipeline should be run in order from step 1 to step 7.
+This repository includes all scripts and notebooks used in my master thesis. This pipeline is divided into 7 steps and should be run in order from step 1 to step 7. `FindCSD.py` and `CreateNetwork.py` are scripts develope by Voigt et al. (https://github.com/andre-voigt/CSD), whereas `FindCorrOnly.cpp` is a modified script based on `FindCorrAndVar.cpp`. 
 
 ## Data
 
@@ -20,6 +20,16 @@ Recommended setup:
 3. Run the steps in numerical order.
 4. Check that the output from one step exists before moving to the next step.
 
+## Short summary of the order
+
+1. Preprocess data
+2. Calculate correlations
+3. Create CSD networks
+4. Run network analysis
+5. Run functional analysis (optional)
+6. Compare RNA and protein
+7. Run survival analysis
+
 ## Step 1: Data Preprocessing
 
 Folder: `Pipeline/1_Data_Preprocessing`
@@ -32,14 +42,16 @@ Run these notebooks in this order:
 
 This step creates processed RNA and proteomics data in `data/processed/` for the rest of the pipeline.
 
+`cell_composition_analysis.py` — visualizes tissue composition before and after tumor purity filtering and can be run independently after step 1.
+
 ## Step 2: Correlation
 
 Folder: `Pipeline/2_Correlation`
 
 Run the files in this folder to calculate correlations:
 
+1. `FindCorrOnly.cpp` 
 1. `wTO_calculation.r`
-2. `FindCorrOnly.cpp`
 
 This step creates correlation results that are used in the later network steps.
 
@@ -49,8 +61,8 @@ Folder: `Pipeline/3_CSD_Network`
 
 Run these files in this order:
 
-1. `CreateNetwork.py`
-2. `FindCSD.py`
+1. `FindCSD.py`
+2. `CreateNetwork.py`
 
 This step creates the C, S, D, and CSD networks used in the network analysis.
 
@@ -96,18 +108,10 @@ Run:
 
 This step connects the most important modules and genes to survival data.
 
-## Short summary of the order
-
-1. Preprocess data
-2. Calculate correlations
-3. Create CSD networks
-4. Run network analysis
-5. Run functional analysis (optional)
-6. Compare RNA and protein
-7. Run survival analysis
 
 ## Tips
 
 - Run each notebook with `Run All` from the top.
 - Do not skip steps, because later steps depend on files from earlier steps.
 - Most outputs are written to `results/` and `data/processed/`.
+- Further detalis on input and output is described in each individual notebook.
