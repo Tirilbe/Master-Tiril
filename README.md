@@ -1,6 +1,6 @@
 # Cross-Omics network analyses of PDAC
 
-This repository includes all scripts and notebooks used in my master thesis. This pipeline is divided into 7 steps and should be run in order from step 1 to step 7. `FindCSD.py` and `CreateNetwork.py` are scripts develope by Voigt et al. (https://github.com/andre-voigt/CSD), whereas `FindCorrOnly.cpp` is a modified script based on `FindCorrAndVar.cpp`. 
+This repository includes all scripts and notebooks used in my master thesis. This pipeline is divided into 7 steps and should be run in order from step 1 to step 7. `FindCSD.py` and `CreateNetwork.py` are scripts developed by Voigt et al. (https://github.com/andre-voigt/CSD), whereas `FindCorrOnly.cpp` is a modified script based on `FindCorrAndVar.cpp`. 
 
 ## Data
 
